@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   text-align: center;
   overflow-x: hidden;
+  letter-spacing: 2px;
 }
 
 /* Top red bar */
@@ -33,19 +34,19 @@ body {
   z-index: 10;
 }
 
-/* Logo styling */
+/* Logo */
 .logo {
   width: 300px;
   max-width: 80%;
   margin-top: 100px;
-  filter: drop-shadow(0 0 10px #ff0000);
+  filter: none;
 }
 
-/* Text styles */
+/* Text */
 .content h2 {
   margin-top: 30px;
   font-size: 1.6rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: #fff;
 }
 
@@ -88,4 +89,73 @@ body {
 
 .signup-form button:hover {
   background-color: #b30000;
+}
+
+/* Instagram button */
+.insta-btn {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 10px 25px;
+  background-color: transparent;
+  border: 2px solid #ff0000;
+  color: #ff0000;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.insta-btn:hover {
+  background-color: #ff0000;
+  color: #fff;
+  box-shadow: 0 0 20px #ff0000;
+}
+
+/* Password Screen */
+#password-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+#password-screen.hidden {
+  display: none;
+}
+
+#password-input {
+  margin-top: 10px;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid #ff0000;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  width: 200px;
+}
+
+#enter-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff0000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#enter-btn:hover {
+  background: #b30000;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #777;
 }
