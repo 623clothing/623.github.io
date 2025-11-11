@@ -1,21 +1,24 @@
-// Password gate
-const passwordScreen = document.getElementById("password-screen");
-const mainContent = document.getElementById("main-content");
-const enterBtn = document.getElementById("enter-btn");
-const passwordInput = document.getElementById("password-input");
+// Admin access code system
+const adminBtn = document.getElementById("admin-btn");
+const adminCode = document.getElementById("admin-code");
+const secretCode = "623admin"; // your access code
 
-// set your password here
-const secretPassword = "fbc623";
+if (adminBtn) {
+  adminBtn.addEventListener("click", () => {
+    if (adminCode.value.toLowerCase() === secretCode) {
+      window.location.href = "admin.html";
+    } else {
+      alert("Wrong code, access denied.");
+    }
+  });
+}
 
-enterBtn.addEventListener("click", () => {
-  if (passwordInput.value.toLowerCase() === secretPassword) {
-    passwordScreen.classList.add("hidden");
-    mainContent.style.display = "block";
+// Admin page functionality
+function toggleProduct(id) {
+  const product = document.getElementById(id);
+  if (product.style.display === "none") {
+    product.style.display = "block";
   } else {
-    alert("Wrong password, try again.");
+    product.style.display = "none";
   }
-});
-
-// Hide content initially until password entered
-mainContent.style.display = "none";
-passwordScreen.classList.remove("hidden");
+}
